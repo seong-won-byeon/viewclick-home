@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- <meta name="naver-site-verification" content="e3403089303711a45470d6eea49f2639b9bf863b" /> -->
+        <meta property="og:title" content="뷰클릭(ViewClick)" />
+        <meta name="description" content="영상감상이 재테크가 되는 새로운 앱테크" />
+        <meta property="og:description" content="영상감상이 재테크가 되는 새로운 앱테크" />
+        <meta property="og:site_name" content="뷰클릭(ViewClick)" />
+        <meta property="og:image" content="./assets/img/musiclick-og.png"/>
+        <meta name="robots" content="ALL"/>
+        <title>뷰클릭(ViewClick)</title>
+        <link rel="stylesheet" href="./assets/css/style.css"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/index.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+        <link rel="shortcut icon" href="./assets/img/favicon.png">
+    </head>
+<body>
+    <!-- <div class="lenis-wrap">
+        <div class="inner-lenis"> -->
+            <div id="wrap">
+                <div class="sc-visual">
+                    <header>
+                        <div class="inner">
+                          <h1 class="logo"><a href="#">
+                            <img src="./assets/img/main-logo.svg" alt="뮤직클릭 로고">
+                          </a></h1>
+                          <nav>
+                            <a href="#contact" class="btn-contact" id="goContact">서비스 문의</a>
+                          </nav>
+                        </div>
+                    </header>
+                    <section class="hero">
+                        <h2>영상보고 보상받는 새로운 방법.<br>뷰클릭</h2>
+                        <p class="desc">광고가 아닌 “경험”에 대한 보상<br>AI 추천으로 채널 성장 가속화<br>다양한 매체사 앱과 연동, 포인트 직접 적립</p>
+                        <div class="marquee-area">
+                            <div class="speech-bubble bubble1">
+                                @오늘의 1위 영상
+                            </div>
+                            <div class="speech-bubble bubble2">
+                                영상보고 리워드 받기
+                            </div>
+                            <div class="speech-bubble bubble3">
+                                @퇴근할때
+                            </div> 
+                            <div class="marquee">
+                                <div class="marquee-content marquee01">
+                                    <div class="logo-wrap">
+                                      <div><img src="./assets/img/video7.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video2.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video11.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video4.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video9.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video1.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video13.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video5.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video8.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video3.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video12.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video10.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video6.png" alt="영상"></div>
+                                    </div>
+                                    <div class="logo-wrap">
+                                      <div><img src="./assets/img/video3.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video9.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video12.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video1.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video7.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video10.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video2.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video5.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video13.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video4.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video8.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video11.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video6.png" alt="영상"></div>
+                                    </div>
+                                    <div class="logo-wrap">
+                                      <div><img src="./assets/img/video6.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video13.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video2.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video8.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video12.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video5.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video1.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video9.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video3.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video10.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video4.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video11.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video7.png" alt="영상"></div>
+                                    </div>
+                                    <div class="logo-wrap">
+                                      <div><img src="./assets/img/video10.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video5.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video7.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video12.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video3.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video11.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video2.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video9.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video6.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video13.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video4.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video1.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video8.png" alt="영상"></div>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="marquee-content marquee02">
+                                    <div class="logo-wrap">
+                                      <div><img src="./assets/img/video8.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video1.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video10.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video3.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video13.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video6.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video12.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video4.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video9.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video2.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video5.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video11.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video7.png" alt="영상"></div>
+                                    </div>
+                                    <div class="logo-wrap">
+                                      <div><img src="./assets/img/video11.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video4.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video2.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video9.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video7.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video13.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video1.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video12.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video6.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video8.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video10.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video5.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video3.png" alt="영상"></div>
+                                    </div>
+                                    <div class="logo-wrap">
+                                      <div><img src="./assets/img/video2.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video8.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video5.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video11.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video1.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video9.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video6.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video3.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video12.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video7.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video10.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video4.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video13.png" alt="영상"></div>
+                                    </div>
+                                    <div class="logo-wrap">
+                                      <div><img src="./assets/img/video12.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video7.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video4.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video10.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video2.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video11.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video8.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video5.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video13.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video1.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video6.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video9.png" alt="영상"></div>
+                                      <div><img src="./assets/img/video3.png" alt="영상"></div>
+                                    </div>
+                                  </div>
+                                  
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <main>
+
+                    <!-- 캠페인 안내 -->
+                    <section class="sc-campaign">
+                        <h3><span>영상 시청과 다양한 미션을 통해,<br>새롭게 발견한 크리에이터에게 응원을 더하세요.</span></h3>
+                        <div class="campaign-boxes">
+                          <article>
+                              <div class="col-left">
+                                  <h4>인기 크리에이터 캠페인</h4>
+                                  <p>인기 크리에이터들의 보상 캠페인에 참여하고<br> 리워드를 받아보세요.</p>
+                              </div>
+                              <div class="col-right"> 
+                                  <img src="./assets/img/artist02.png" alt="인기 크리에이터 캠페인">
+                              </div>
+                          </article>
+                          <article>
+                              <div class="col-left">
+                                  <h4>신규 크리에이터 발굴</h4>
+                                  <p>숨겨진 보석같은 크리에이터들을 응원하고<br>특별한 포인트 혜택을 누려보세요.</p>
+                              </div>
+                              <div class="col-right">
+                                  <img src="./assets/img/artist01.png" alt="신규 크리에이터 발굴">
+                              </div>
+                          </article>
+                        </div>
+                    </section>
+
+                    <!-- 사용법 설명 -->
+                    <section class="sc-how">
+                        <div class="sticky-wrapper">
+                            <div class="sticky">
+                                <div class="inner">
+                                    <div class="col-left">
+                                        <h3>좋아하는 영상 보고, <span class="mark mark01">보상</span>까지 받는<br>뷰클릭만의 <span class="mark mark02">특별한 경험을</span> 즐겨보세요.</h3>
+                                        <div class="flex-cont">
+                                            <ul class="steps">
+                                              <li data-index="0" class="active">
+                                                <h4>영상 감상하기</h4>
+                                                <p>인기 크리에이터의 영상을 감상하세요.<br>
+                                                    일부는 쇼츠 형식으로도 제공돼요.</p>
+                                              </li>
+                                              <li data-index="1">
+                                                <h4>미션 수행하기</h4>
+                                                <p>좋아요, 구독, 댓글 등 다양한 미션을 수행하고<br> 추가 리워드를 획득하세요.</p>
+                                              </li>
+                                              <li data-index="2">
+                                                <h4>포인트 적립 및 사용</h4>
+                                                <p>적립된 포인트는 제휴사에서 사용할 수 있어요.</p>
+                                              </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-right">
+                                        <div class="app-preview">
+                                            <img src="./assets/img/1_listening.png" alt="음악 감상하기" class="preview-img img-0 active" />
+                                            <img src="./assets/img/2_mission.png" alt="미션 수행하기" class="preview-img img-1" />
+                                            <img src="./assets/img/3_point.png" alt="포인트 적립 및 사용" class="preview-img img-2" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <section class="sc-video">
+                        <div class="sticky-wrapper">
+                            <div class="sticky">
+                                <p>보는 재미에, 받는 즐거움까지!<br>
+                                    다양하게 즐겨보세요</p>
+                                <div class="video-area">
+                                    <div class="content">
+                                        <video src="./assets/img/video_1.mp4" muted loop playsinline id="rewardVideo"></video>
+                                        <!-- <video src="./assets/img/video_2.mp4" muted></video>
+                                        <video src="./assets/img/video_3.mp4" muted></video> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 서비스 문의 -->
+                    <section class="sc-contact" id="contact">
+                        <div class="inner">
+                            <h3><span>서비스 문의</span></h3>
+                            <div class="inner-wrap">
+                                <div class="col-left" id="Accordion_wrap">
+                                    <div class="wrap">
+                                        <div class="que">
+                                            <span>뷰클릭은 어떤 서비스인가요?</span>
+                                            <span class="icon">
+                                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41083 6.58893C5.73626 6.91437 6.2639 6.91437 6.58934 6.58893L11.5893 1.58893C11.9148 1.26349 11.9148 0.735856 11.5893 0.410419C11.2639 0.0849818 10.7363 0.0849818 10.4108 0.410419L6.00008 4.82116L1.58934 0.410419C1.2639 0.0849818 0.736263 0.0849818 0.410826 0.410419C0.0853888 0.735856 0.0853888 1.26349 0.410826 1.58893L5.41083 6.58893Z" fill="#808080"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="anw">
+                                           <span>뷰클릭은 영상을 듣고 미션을 수행하면 리워드를 받을 수 있는 서비스입니다.
+                                            유튜브 영상 기반으로 음악을 감상하고, 참여 기록에 따라 포인트가 적립됩니다</span>
+                                        </div>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="que">
+                                            <span>영상은 하루에 몇 번 들을 수 있나요?</span>
+                                            <span class="icon">
+                                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41083 6.58893C5.73626 6.91437 6.2639 6.91437 6.58934 6.58893L11.5893 1.58893C11.9148 1.26349 11.9148 0.735856 11.5893 0.410419C11.2639 0.0849818 10.7363 0.0849818 10.4108 0.410419L6.00008 4.82116L1.58934 0.410419C1.2639 0.0849818 0.736263 0.0849818 0.410826 0.410419C0.0853888 0.735856 0.0853888 1.26349 0.410826 1.58893L5.41083 6.58893Z" fill="#808080"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="anw">
+                                           <span>동일 채널 및 캠페인은 최초 1회만 참여가 가능하며, 일일 참여 가능 횟수는 운영 정책에 따라 변동될 수 있습니다.
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="que">
+                                            <span>영상은 끝까지 들어야 하나요? 중간에 꺼도 되나요?</span>
+                                            <span class="icon">
+                                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41083 6.58893C5.73626 6.91437 6.2639 6.91437 6.58934 6.58893L11.5893 1.58893C11.9148 1.26349 11.9148 0.735856 11.5893 0.410419C11.2639 0.0849818 10.7363 0.0849818 10.4108 0.410419L6.00008 4.82116L1.58934 0.410419C1.2639 0.0849818 0.736263 0.0849818 0.410826 0.410419C0.0853888 0.735856 0.0853888 1.26349 0.410826 1.58893L5.41083 6.58893Z" fill="#808080"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="anw">
+                                           <span>일정 시간 이상 시청해야 리워드가 인정됩니다. 영상이 끝나기 전에 종료하거나, 백그라운드 시청은 리워드 지급 대상에서 제외될 수 있습니다.
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="que">
+                                            <span>💰 리워드는 어떻게 지급되나요?</span>
+                                            <span class="icon">
+                                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41083 6.58893C5.73626 6.91437 6.2639 6.91437 6.58934 6.58893L11.5893 1.58893C11.9148 1.26349 11.9148 0.735856 11.5893 0.410419C11.2639 0.0849818 10.7363 0.0849818 10.4108 0.410419L6.00008 4.82116L1.58934 0.410419C1.2639 0.0849818 0.736263 0.0849818 0.410826 0.410419C0.0853888 0.735856 0.0853888 1.26349 0.410826 1.58893L5.41083 6.58893Z" fill="#808080"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="anw">
+                                           <span>영상 감상 완료 후 1~2분 이내에 자동으로 적립되며, 이용하신 서비스의 리워드 시스템에 따라 포인트 형태로 지급됩니다.
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="que">
+                                            <span>적립한 포인트는 어떻게 사용할 수 있나요?</span>
+                                            <span class="icon">
+                                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41083 6.58893C5.73626 6.91437 6.2639 6.91437 6.58934 6.58893L11.5893 1.58893C11.9148 1.26349 11.9148 0.735856 11.5893 0.410419C11.2639 0.0849818 10.7363 0.0849818 10.4108 0.410419L6.00008 4.82116L1.58934 0.410419C1.2639 0.0849818 0.736263 0.0849818 0.410826 0.410419C0.0853888 0.735856 0.0853888 1.26349 0.410826 1.58893L5.41083 6.58893Z" fill="#808080"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="anw">
+                                           <span>포인트는 이용하신 서비스의 정책에 따라 현금 전환, 기프티콘 교환, 추가 콘텐츠 이용 등 다양한 방식으로 사용하실 수 있습니다. 보다 자세한 내용은 해당 서비스의 안내를 참고해 주세요.
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="que">
+                                            <span>리워드가 적립되지 않았어요.</span>
+                                            <span class="icon">
+                                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41083 6.58893C5.73626 6.91437 6.2639 6.91437 6.58934 6.58893L11.5893 1.58893C11.9148 1.26349 11.9148 0.735856 11.5893 0.410419C11.2639 0.0849818 10.7363 0.0849818 10.4108 0.410419L6.00008 4.82116L1.58934 0.410419C1.2639 0.0849818 0.736263 0.0849818 0.410826 0.410419C0.0853888 0.735856 0.0853888 1.26349 0.410826 1.58893L5.41083 6.58893Z" fill="#808080"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="anw">
+                                           <span>영상 감상 조건이 충족되지 않거나, 인증 상태가 확인되지 않은 경우 리워드가 지급되지 않을 수 있습니다. 참여 조건을 다시 확인해 주세요.
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="que">
+                                            <span>문의는 어디서 하나요?</span>
+                                            <span class="icon">
+                                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41083 6.58893C5.73626 6.91437 6.2639 6.91437 6.58934 6.58893L11.5893 1.58893C11.9148 1.26349 11.9148 0.735856 11.5893 0.410419C11.2639 0.0849818 10.7363 0.0849818 10.4108 0.410419L6.00008 4.82116L1.58934 0.410419C1.2639 0.0849818 0.736263 0.0849818 0.410826 0.410419C0.0853888 0.735856 0.0853888 1.26349 0.410826 1.58893L5.41083 6.58893Z" fill="#808080"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="anw">
+                                           <span>뷰클릭 공식 이메일로 문의하시면 확인 후 빠르게 답변드리겠습니다.
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="que">
+                                            <span>영상이 재생되지 않아요.</span>
+                                            <span class="icon">
+                                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41083 6.58893C5.73626 6.91437 6.2639 6.91437 6.58934 6.58893L11.5893 1.58893C11.9148 1.26349 11.9148 0.735856 11.5893 0.410419C11.2639 0.0849818 10.7363 0.0849818 10.4108 0.410419L6.00008 4.82116L1.58934 0.410419C1.2639 0.0849818 0.736263 0.0849818 0.410826 0.410419C0.0853888 0.735856 0.0853888 1.26349 0.410826 1.58893L5.41083 6.58893Z" fill="#808080"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="anw">
+                                           <span>인터넷 연결 상태를 확인한 후 앱을 재실행해 주세요. 지속될 경우 고객센터로 문의바랍니다.
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-right">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.584757066076!2d127.01559231134488!3d37.49412422816066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21a0c3c0129846c1%3A0xd1212d497943aeca!2zKOyjvCnsnpDrqr3rnqk!5e0!3m2!1sko!2skr!4v1749460148401!5m2!1sko!2skr" width="590" height="252" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <div class="address">
+                                        <p class="comp">(주)자몽랩</p>
+                                        <p class="comp-addr">서울특별시 서초구 서초대로60길 18, 7층(교대 정인빌딩)</p>
+                                        <p class="comp-email">E-mail: <a href="mailto:viewclick@jamonglab.com">viewclick@jamonglab.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+        
+                <!-- 푸터 -->
+                <footer>
+                    <div class="footer-top">
+                      <a href="#" aria-label="자몽랩 메인 페이지로 이동">
+                        <img src="./assets/img/footer-logo.svg" alt="자몽랩 로고">
+                      </a>
+                      <address>
+                        <p>주소: 서울특별시 서초구 서초대로60길 18, 7층(교대 정인빌딩)</p>
+                        <p>주식회사 자몽랩 | 대표이사: 조준형 | 사업자등록번호: 267-81-03235</p>
+                      </address>
+                    </div>
+                  
+                    <div class="footer-bottom">
+                      <small>Copyright &copy; JAMONGLAB INC. All Rights Reserved. </small>
+                        <div class="link-cont">
+                            <a href="terms.html" class="policy-link" target="_blank">이용약관</a>
+                            <a href="privacy.html" class="policy-link" target="_blank">개인정보처리방침</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        <!-- </div>
+    </div> -->
+</body>
+</html>
+    
